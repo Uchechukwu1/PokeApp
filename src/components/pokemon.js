@@ -1,7 +1,8 @@
 import React from "react";
 
 const Pokemon = props => {
-  return <p>uche is</p>;
+  console.log(props.url);
+  return <li>{props.url}</li>;
 };
 
 export default Pokemon;
