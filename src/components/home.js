@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 import pokes from "./pokes.PNG";
 
@@ -7,7 +8,7 @@ const home = () => {
     <div>
       <div className="container">
         <div className="img">
-          <img src={pokes} alt="logo" width="50px" className="logo" />
+          <img src={pokes} alt="logo" width="100px" className="logo" />
         </div>
       </div>
 
@@ -15,7 +16,9 @@ const home = () => {
         <h1>Welcome to PokeApp!</h1>
         <br />
 
-        <button className="button">Go!</button>
+        <Link to="/pokemon" className="button">
+          Go!
+        </Link>
       </div>
     </div>
   );

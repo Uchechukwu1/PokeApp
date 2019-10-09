@@ -70,7 +70,7 @@ class PokemonList extends Component {
       pokemon
     } = this.state;
     return (
-      <div>
+      <div className="list">
         <div>
           <input name="search" value={query} onChange={this.filter} />
         </div>
@@ -81,6 +81,9 @@ class PokemonList extends Component {
         ))}
         {previous && <button onClick={this.goToPrevious}>previous</button>}
         {next && <button onClick={this.goToNext}>next</button>}
+        <br />
+        <br />
+        <br />
         <span>there are {total} pokemons</span>
       </div>
     );
