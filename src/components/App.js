@@ -1,16 +1,39 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { Component } from "react";
 import "./App.css";
-import Nav from "./Nav.js";
-import Header from "./Header.js";
+import { BrowserRouter, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="body">
-      <Nav />
-      <Header />
-    </div>
-  );
+//App components
+import Home from "./home.js";
+import PokemonList from "./Pokemon_list.js";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pokemon: []
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100")
+      .then(response => response.json())
+      .then(responseData => {
+        this.setState({ pokemon: responseData.results });
+      })
+
+      .catch(error => {
+        console.log("error fetching and parsing data", error);
+      });
+  }
+  render() {
+    console.log(this.state.pokemon);
+    return (
+      <div className="body">
+        <Home />
+        <PokemonList data={this.state.pokemon} />
+      </div>
+    );
+  }
 }
 
 export default App;

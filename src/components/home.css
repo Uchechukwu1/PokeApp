@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Grenze&display=swap");
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  width: 100%;
+  padding: 0.2%;
+  margin-bottom: 40px;
+}
+.img {
+  flex-grow: 1;
+}
+.item {
+  flex-grow: 4;
+  font-size: 31px;
+  font-family: "Grenze", serif;
+}
+.header {
+  text-align: center;
+  font-family: "Grenze", serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #4caf59; /* Green */
+  border: solid rgba(0, 0, 0, 0.61);
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  cursor: pointer;
+  width: 200px;
+  font-family: "Grenze", serif;
+  align-self: center;
+  height: 60px;
+}

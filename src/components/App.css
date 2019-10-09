@@ -4,7 +4,7 @@
 
 .body {
   margin: 0 auto;
-  border: solid black;
+  border: solid 0.5px black;
   width: 80%;
   height: 550px;
   padding: 0.9%;
