@@ -20,13 +20,22 @@ const routes = [
     path: "/pokemon",
     exact: true,
     component: PokemonList,
-    breadCrumb: () => <Link to="/pokemon">&nbsp;>&nbsp;Pokemon</Link>
+    breadCrumb: () => (
+      <Link to="/pokemon">
+        &nbsp;>&nbsp;<span className="nav">Pokemon</span>
+      </Link>
+    )
   },
   {
     path: "*",
     component: Home,
     exact: false,
-    breadCrumb: () => <Link to="/">PokeApp</Link>
+    breadCrumb: () => (
+      <Link to="/">
+        {" "}
+        <span className="nav">PokeApp</span>
+      </Link>
+    )
   }
 ];
 
