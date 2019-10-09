@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 //App components
 import Home from "./home.js";
 import PokemonList from "./Pokemon_list.js";
+import PokemonDetails from "./PokemonDetails.js";
 
 class App extends Component {
   render() {
